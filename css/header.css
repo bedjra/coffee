@@ -1,0 +1,191 @@
+/* Applique la police 'Roboto' à tous les éléments de la page */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%; /* Fait en sorte que le header occupe toute la largeur */
+    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #6F4F37; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour différencier visuellement */
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+    background: none;
+
+}
+/* Logo */
+header .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+header .logo img {
+    width: 40px; /* Ajustez la taille de l'image */
+    height: auto;
+    margin-right: 10px; /* Espacement entre l'image et le texte */
+}
+
+header .logo p {
+    font-size: 30px;
+}
+
+
+/* Menu */
+header .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .menu li {
+    margin: 0 20px; /* Espacement entre les éléments du menu */
+}
+
+header .menu li a:hover {
+    display: inline-block;
+    color: #130101;
+    padding: 5px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid transparent; /* Bordure transparente par défaut */
+    background-color: #FFA500;
+    border: 2px solid #fff; /* Bordure blanche au survol */
+    border-radius: 30px; /* Garde l'arrondi pour le cylindre */
+}
+
+
+header .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Taille du texte */
+}
+
+header .menu li.active a {
+    font-weight: bold; /* Style pour l'élément actif */
+}
+
+/* Pour le responsive menu */
+header .responsive-menu {
+    display: none; /* Vous pouvez ajouter un menu hamburger ici pour les petits écrans */
+}
+
+/* Responsive: pour les petits écrans */
+@media (max-width: 768px) {
+    header .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .menu li {
+        margin: 10px 0;
+    }
+
+    header .responsive-menu {
+        display: block;
+    }
+}
+
+
+
+
+/*Responsive*/
+@media (max-width:750px) {
+    header .menu {
+        display: none;
+    }
+
+    .btn-reservation {
+        display: none;
+    }
+
+    
+
+    /*Responsive menu*/
+    .responsive-menu {
+        padding-top: 15px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .responsive-menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        background-color: black;
+        width: 28px;
+        box-shadow: 0 10px 0 black;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+
+    .responsive-menu.active::after {
+        box-shadow: 0 0 0 black;
+        transform: rotate(45deg);
+    }
+
+    .responsive-menu::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        background-color: black;
+        width: 28px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+
+    .responsive-menu.active::before {
+        transform: rotate(-45deg);
+    }
+
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        top: 1px;
+        right: 0;
+        flex-direction: column;
+        background-color: #6F4F37;
+        align-items: unset;
+        animation: animate-menu 1s forwards;
+    }
+
+    header .menu.responsive li {
+        margin: 20px;
+        width: 100px;
+        padding-right: 30px;
+    }
+
+    @keyframes animate-menu {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(100%);
+        }
+    }
+}

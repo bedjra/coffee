@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+body {
+    padding-top: 75px; /* Ajustez cette valeur en fonction de la hauteur réelle de votre header */
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px;
+    background-color: #6F4F37;
+    cursor: pointer;
+
+
+}
+
+:root {
+    --secondary-color: #FFA500;
+}
+
+
+.contenthome {
+    max-width: 50%;
+    /* Limite la largeur pour que le texte ne prenne pas trop de place */
+}
+
+.home .contenthome span {
+    font-family: 'Miniver', sans-serif;
+    color: var(--secondary-color);
+    font-size: 45px;
+}
+
+.contenthome h4 {
+    font-size: 50px
+}
+
+.contenthome p {
+    font-size: 25px
+}
+
+.contenthome p {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.media img {
+    margin-right: 10px;
+    height: 527px;
+}
+
+.contenthome .exp {
+    background-color: #FFA500;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+}
+
+.contenthome .expl {
+    background-color: #6F4F37;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid #fff; /* Bordure blanche */
+
+}
+
+.exp:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .home {
+        padding: 50px;
+    }
+
+    .contenthome h4 {
+        font-size: 40px;
+    }
+
+    .contenthome p {
+        font-size: 15px;
+    }
+
+    .media img {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .contenthome {
+
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .contenthome h4 {
+        font-size: 35px;
+    }
+
+    .media img {
+        height: 400px;
+        margin-right: 0;
+    }
+
+    .contenthome .exp {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .contenthome h4 {
+        padding-top: 50px;
+        font-size: 28px;
+    }
+
+    .contenthome p {
+        font-size: 14px;
+    }
+
+    .home {
+        width: 400px;
+    }
+
+    .media img {
+        height: 250px;
+    }
+
+   
+}
+
+@media (max-width: 320px) {
+    .contenthome h4 {
+        font-size: 24px;
+    }
+
+    .contenthome p {
+        font-size: 12px;
+    }
+
+    .media img {
+        height: 250px;
+    }
+
+}
+
+
+/*Destination CSS*/
+#popular-destination {
+    padding: 0 10%;
+    margin-bottom: 50px;
+}
+
+#popular-destination .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+#popular-destination .content .box {
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+    width: 100%;
+    gap: 30%;
+    transition: 0.5s;
+}
+
+#popular-destination .content .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.box .content h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.box .content p {
+    padding: 2px;
+    font-size: 12px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+
+
+/* Style de base pour les boîtes */
+#popular-destination .box {
+    padding-top: 30px;
+    margin: 30px;
+    width: 30%;
+    display: inline-block;
+
+}
+
+/* Styles pour les grands écrans */
+@media (min-width: 1200px) {
+    #popular-destination .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        /* Espace entre les boîtes */
+    }
+
+    #popular-destination .box {
+        margin: 20px;
+        /* Espacement entre les images */
+        width: 30%;
+        /* Largeur pour les grands écrans */
+    }
+}
+
+/* Styles pour les petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+    #popular-destination .content {
+        display: flex;
+        flex-direction: column;
+        /* Disposer les boîtes en colonne */
+        align-items: stretch;
+        /* Les boîtes s'étendent sur toute la largeur */
+    }
+
+    #popular-destination .box {
+        margin: 0;
+        /* Enlever la marge pour que les boîtes soient collées aux côtés */
+        width: 100%;
+        /* Largeur à 100% pour qu'elles prennent toute la largeur */
+    }
+
+    #popular-destination .box img {
+        width: 100%;
+        /* S'assurer que les images prennent toute la largeur de la boîte */
+        height: auto;
+        /* Gérer la hauteur automatiquement */
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.highlight {
+    border-bottom: 4px solid red;
+    display: inline-block;
+    padding-bottom: 5px;
+    /* Espacement entre le texte et le trait */
+}
+
+h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+
+
+
+.ho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* espace entre l'image et le texte */
+    padding: 70px;
+    background-color: #ecc3c3;
+    ;
+
+}
+
+.contentho {
+    max-width: 50%;
+    /* Limite la largeur pour que le texte ne prenne pas trop de place */
+}
+
+.contentho h4 {
+    font-size: 50px
+}
+
+.contentho p {
+    font-size: 17px
+}
+
+.contentho p {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.medi img {
+    margin-left: 100px;
+    height: 300px;
+}
+
+.contentho .expl {
+    background-color: rgb(243, 26, 26);
+    display: inline-block;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.expl:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive pour les écrans moyens (tablettes) */
+@media (max-width: 1024px) {
+    .ho {
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .medi img {
+        margin-left: 0;
+        height: 250px;
+    }
+
+    .contentho {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .contentho h4 {
+        font-size: 40px;
+    }
+
+    .contentho p {
+        font-size: 15px;
+    }
+}
+
+/* Responsive pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+    .ho {
+        padding: 30px;
+    }
+
+    .medi img {
+        height: 200px;
+    }
+
+    .contentho h4 {
+        font-size: 30px;
+    }
+
+    .contentho p {
+        font-size: 14px;
+    }
+
+    .contentho .expl {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive pour les très petits écrans (ex. téléphones plus petits) */
+@media (max-width: 480px) {
+    .ho {
+        padding: 20px;
+        width: 400px;
+    }
+
+    .medi img {
+        height: 150px;
+    }
+
+    .contentho h4 {
+        font-size: 24px;
+    }
+
+    .contentho p {
+        font-size: 12px;
+    }
+
+    .contentho .expl {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
+
+#pop .row {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    /* Distribuer les produits de manière égale */
+    gap: 30px;
+    /* Augmenter l'espacement entre les produits */
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+
+.cont {
+    display: flex;
+    justify-content: center;
+    /* Centrer tous les produits */
+    align-items: flex-start;
+    /* Aligner les éléments en haut */
+    gap: 30px;
+    /* Augmenter l'espacement entre les produits */
+    flex-wrap: wrap;
+    /* Permet de passer à la ligne */
+}
+
+
+.prod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #ffffff;
+    /* Bordure autour de chaque produit */
+    padding: 30px;
+    /* Augmenter l'espacement interne pour un produit moins serré */
+    border-radius: 10px;
+    /* Coins arrondis pour un effet plus doux */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre plus prononcée pour une meilleure visibilité */
+    margin-bottom: 30px;
+    /* Augmenter l'espacement entre les lignes de produits */
+    transition: transform 0.3s ease;
+    /* Ajout d'une transition pour l'effet d'agrandissement */
+}
+
+.prod:hover {
+    transform: scale(1.05);
+    /* Agrandir légèrement le produit au survol */
+}
+
+.main-img {
+    width: 15%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    /* Bordure arrondie pour l'image */
+}
+
+.pric {
+    color: #011004;
+    /* Une couleur plus vive pour le prix */
+    margin-top: 15px;
+    /* Espacement plus large entre l'image et le prix */
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* Augmenter légèrement la taille du texte */
+}
+
+.rating {
+    margin-top: 8px;
+    /* Augmenter l'espacement entre le prix et les étoiles */
+}
+
+.star {
+    color: rgb(255, 0, 25);
+}
+
+.bor {
+    margin-top: 15px;
+    /* Espacement plus large entre les éléments */
+}
+
+.round-img {
+    width: 70px;
+    /* Légèrement plus grand pour un meilleur effet visuel */
+    height: 70px;
+    border-radius: 50%;
+    /* Bordure circulaire pour l'image secondaire */
+    object-fit: cover;
+}
+
+
+
+
+/* Cela permet d'afficher les 3 produits sur une même ligne */
+@media (max-width: 768px) {
+    .prod {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .prod {
+        width: 30%;
+    }
+}
+
+.nom {
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+
+#partenaires {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px 0;
+    /* Espacement autour de la section */
+}
+
+.contenu {
+    display: flex;
+    /* Utilise Flexbox pour aligner les éléments sur la même ligne */
+    justify-content: space-between;
+    /* Répartit l'espace de manière égale entre les éléments */
+    align-items: center;
+    /* Aligne verticalement les éléments */
+    flex-wrap: wrap;
+    /* Permet aux éléments de passer à la ligne si nécessaire */
+}
+
+.tox {
+    flex: 1 1 15%;
+    /* Chaque élément prend 15% de la largeur, ajustable selon le nombre d'éléments */
+    display: flex;
+    /* Flex pour centrer les images dans chaque div */
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+}
+
+.tox img {
+    max-width: 100%;
+    /* L'image ne dépasse pas la largeur de son conteneur */
+    height: auto;
+    /* Maintient les proportions de l'image */
+}
+
+
+
+/* Styles spécifiques pour les petits écrans */
+@media (max-width: 768px) {
+    .ho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .medi {
+        order: 1;
+    }
+
+    .contentho {
+        order: 2;
+    }
+}

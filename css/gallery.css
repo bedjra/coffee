@@ -1,0 +1,116 @@
+
+/*Destination CSS*/
+#gallery {
+    padding: 0 10%;
+    margin-bottom: 50px;
+}
+
+#gallery .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+#gallery .content .box {
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+    width: 100%;
+    gap: 30%;
+    transition: 0.5s;
+     
+}
+
+#gallery .content .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+     box-sizing: border-box;
+     border-radius: 5%; /* Rend l'élément circulaire */
+
+}
+#gallery .content .box:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.box .content h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.box .content p {
+    padding: 2px;
+    font-size: 12px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+
+
+/* Style de base pour les boîtes */
+#gallery .box {
+    padding-top: 30px;
+    margin: 30px;
+    width: 30%;
+    display: inline-block;
+
+}
+
+/* Styles pour les grands écrans */
+@media (min-width: 1200px) {
+    #gallery .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        /* Espace entre les boîtes */
+    }
+
+    #gallery .box {
+        margin: 20px;
+        /* Espacement entre les images */
+        width: 30%;
+        /* Largeur pour les grands écrans */
+    }
+}
+
+/* Styles pour les petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+    #gallery .content {
+        display: flex;
+        flex-direction: column;
+        /* Disposer les boîtes en colonne */
+        align-items: stretch;
+        /* Les boîtes s'étendent sur toute la largeur */
+    }
+
+    #gallery .box {
+        margin: 0;
+        /* Enlever la marge pour que les boîtes soient collées aux côtés */
+        width: 100%;
+        /* Largeur à 100% pour qu'elles prennent toute la largeur */
+    }
+
+    #gallery .box img {
+        width: 100%;
+        /* S'assurer que les images prennent toute la largeur de la boîte */
+        height: auto;
+        /* Gérer la hauteur automatiquement */
+    }
+}

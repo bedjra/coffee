@@ -1,0 +1,101 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background-color: #f9f9f9; /* Couleur de fond */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacement entre l'image et le texte */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image {
+    flex: 1; /* Occupe 1 part de l'espace disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 350px; /* Taille de l'image */
+    height: 350px;
+    border-radius: 50%; /* Rend l'image circulaire */
+    object-fit: cover; /* Adapte l'image au conteneur */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Légère ombre */
+}
+
+.text {
+    flex: 1; /* Occupe 1 parts de l'espace disponible */
+}
+
+.text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #6F4F37; /* Couleur du titre */
+}
+.highlight {
+    border-bottom: 4px solid #FFA500;;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+.reseaux {
+    display: flex; /* Active le mode flexbox */
+    justify-content: center; /* Centre les images horizontalement */
+    align-items: center; /* Centre les images verticalement */
+    gap: 15px; /* Ajoute de l'espacement entre les images */
+    margin-top: 20px; /* Optionnel : Espace au-dessus */
+}
+
+.reseaux img {
+    width: 35px; /* Largeur des images */
+    height: 30px; /* Hauteur des images */
+    cursor: pointer; /* Ajoute un pointeur pour simuler un lien */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+/* Animation au survol */
+.reseaux img:hover {
+    transform: scale(1.2); /* Agrandit légèrement l'image */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empile les éléments en colonne */
+        text-align: center; /* Centre le texte */
+    }
+
+    .image {
+        order: 1; /* L'image passe en haut */
+        margin-bottom: 20px; /* Ajoute un espace sous l'image */
+    }
+
+    .text {
+        order: 2; /* Le texte passe en dessous */
+    }
+
+    .image img {
+        width: 250px; /* Réduit la taille de l'image */
+        height: 250px;
+    }
+
+    .text h2 {
+        font-size: 24px; /* Réduit légèrement la taille du titre */
+    }
+
+    .text p {
+        font-size: 14px; /* Réduit légèrement la taille du texte */
+    }
+}

@@ -1,0 +1,196 @@
+footer {
+    background-color: #000000;
+    color: #f2f2f2;
+    height: 10%;
+    padding-bottom: 50px;
+
+}
+
+.footer-container {
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.log img {
+
+    height: 50px;
+}
+
+
+.men {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+
+}
+
+
+
+.men li a:hover {
+    text-decoration: none;
+    color: rgb(39, 140, 248);
+}
+
+
+.contact-info {
+    text-align: left;
+
+}
+
+.contact-info p {
+    gap: 0px;
+    margin-left: 30%;
+
+}
+
+
+
+.bas {
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.bass {
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.images-container {
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+    /* Centre horizontalement les images */
+    align-items: center;
+    /* Aligne les images verticalement */
+    gap: 10px;
+    /* Ajoute un espace entre les images */
+}
+
+.images-container img {
+    padding-top: 20px;
+    max-width: 100px;
+    /* Ajustez la taille des images si nécessaire */
+    height: auto;
+    /* Conserve les proportions des images */
+}
+
+h1 {
+    padding-bottom: 30px;
+    margin-right: 100px;
+}
+
+.pfoote {
+    font-size: 11px;
+    color: #bfbdbd;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-wrap: wrap;
+        /* Permet de gérer les éléments sur plusieurs lignes si nécessaire */
+        justify-content: space-between;
+        /* Espace entre les éléments */
+    }
+
+    .log {
+        flex: 1;
+        /* Occupe la moitié de l'écran */
+        text-align: center;
+    }
+
+    .men {
+        flex: 1;
+        /* Occupe la moitié de l'écran */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        /* Espace les éléments */
+        align-items: flex-start;
+        /* Aligne les éléments en haut */
+    }
+
+    /* Les divs "log" sur une ligne */
+    .log {
+        flex: 1;
+        text-align: left;
+        /* Texte aligné à gauche */
+    }
+
+    /* Les divs "men" sur une ligne */
+    .men {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        /* Éléments à gauche et à droite */
+        text-align: left;
+        /* Alignement du texte */
+        flex-wrap: nowrap;
+        /* Les éléments restent sur la même ligne */
+    }
+
+    .men li {
+        padding: 5px;
+        margin: 0;
+    }
+
+    /* Ajustement des images */
+    .reseaux img {
+        margin-left: 30px;
+    }
+
+    .bas {
+        font-size: 12px;
+        padding-top: 20px;
+        margin-left: 110px;
+    }
+
+    .bass {
+        margin-left: 30px;
+        font-size: 12px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .images-container img {
+        width: 3%;
+        /* Réduire la largeur des images à 50% */
+        max-width: 10px;
+        /* Limite maximale de largeur */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .log img {
+        width: 60%;
+        /* Réduire la largeur des images à 50% */
+        max-width: 100px;
+        /* Limite maximale de largeur */
+    }
+}

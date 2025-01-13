@@ -1,0 +1,23 @@
+/* Animation d'apparition de la section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px); /* Déplace la section en bas au début */
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* Quand la section devient visible, appliquez l'animation */
+.section.visible {
+    animation: fadeIn 1s ease-out;
+}

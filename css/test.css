@@ -1,0 +1,104 @@
+.test{
+    padding: 30px ;
+    background-color: #feedce;
+}
+
+#testimonials {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #feedce;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#testimonials .carousel {
+    width: 80%;
+    overflow: hidden;
+}
+
+#testimonials .align {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+#testimonials .produit {
+    flex: 0 0 30%; /* Trois éléments visibles */
+    text-align: center;
+}
+
+.round-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.nom {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.pric {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #FFA500;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10;
+    height: 100px;
+}
+
+.btn.left {
+    left: 20px;
+}
+
+.btn.right {
+    right: 20px;
+}
+
+.btn i {
+    pointer-events: none;
+}
+
+/* Points indicateurs */
+.indicators {
+    background-color: #feedce;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.dot {
+    
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    background-color: #FFA500;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    width: 10px;
+    height: 10px;
+    background-color: #FFA500;
+    transform: scale(1.2);
+}
